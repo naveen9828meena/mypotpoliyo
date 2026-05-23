@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Naveen Meena">
+    <meta name="description" content="About myself and learning projects">
+    <meta name="keywords" content="HTML, CSS, Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS, Portfolio, Contact">
+
+    <title>My Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', Helvetica, sans-serif;
+        }
+
+        body {
+            background: #050816;
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Navbar */
+        nav {
+            width: 100%;
+            height: 80px;
+            background: #111827;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 60px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        /* Logo */
+        .logo {
+            color: #00bfff;
+            font-size: 35px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Menu */
+        .menu {
+            display: flex;
+            gap: 25px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            background: #1f2937;
+            transition: 0.3s;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .menu a:hover {
+            background: #00bfff;
+            color: black;
+            box-shadow: 0 0 15px #00bfff;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(to right, #050816, #1f2937);
+            border-bottom: 2px solid #00bfff;
+        }
+
+        .profile-pic {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: 6px solid #00bfff;
+            object-fit: cover;
+            box-shadow: 0 0 25px #00bfff;
+        }
+
+        .hero h1 {
+            margin-top: 20px;
+            font-size: 40px;
+            color: white;
+        }
+
+        .hero p {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #b0b0b0;
+        }
+
+        hr {
+            width: 80%;
+            margin: 40px auto;
+            border: 1px solid #444;
+        }
+
+        .section {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .section h2 {
+            color: #00bfff;
+            margin-bottom: 20px;
+            font-size: 32px;
+            text-align: center;
+        }
+
+        .section p {
+            color: #d1d5db;
+            line-height: 28px;
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        /* Skills Section */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .skill-box {
+            background: #1f2937;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .skill-box:hover {
+            background: #00bfff;
+            color: black;
+            transform: scale(1.05);
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">portfolio</div>
+        <div class="menu">
+            <a href="home.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="skill.html">SKILLS</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <section class="hero">
+        <!-- Image -->
+        <img src="c:\Users\HP\Downloads\naveen meena.jpeg" alt="naveen meena" class="profile-pic">
+        <h1>Naveen Meena</h1>
+              <h2>About Me</h2>
+        <p>My name is Naveen Meena. I study at Government Engineering College Jaipur. I am a B.Tech student. My branch is Computer Science Engineering. My hobby is learning app development and web development.</p>
+
+        <h2>My Past Learning</h2>
+        <ol>
+            <li>I have learned C and C++</li>
+            <li>I have learned some DSA</li>
+            <li>I have learned DBMS and DCCN</li>
+            <li>I have learned OOPs Programming</li>
+        </ol>
+
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill-box">C Programming</div>
+            <div class="skill-box">C++ Programming</div>
+        
+            <div class="skill-box">C Programming</div>
+            <div class="skill-box">C++ Programming</div>
+            <div class="skill-box">Data Structures</div>
+            <div class="skill-box">DBMS</div>
+            <div class="skill-box">OOPs Concepts</div>
+            <div class="skill-box">Networking (DCCN)</div>
+        </div>
+
+        <hr>
+
+        <!-- Footer Section -->
+        <div class="section" style="text-align: center; margin-top: 40px;">
+            <p>© 2026 Naveen Meena. All Rights Reserved.</p>
+            <p>Follow me on  <a href="#"style="color: #00bfff; ">GitHub</a></p>
+        </div>  
+    </section>
+</body>
+
+</html>

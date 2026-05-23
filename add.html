@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Skill</title>
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            padding: 50px;
+        }
+        form {
+            background: #111;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #00bfff;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add a New Skill</h1>
+    <form id="skillForm">
+        <label for="skillName">Skill Name:</label>
+        <input type="text" id="skillName" required>
+        <label for="skillPercent">Proficiency (%):</label>
+        <input type="number" id="skillPercent" min="0" max="100" required>
+        
+        <button id="checkPass">Add Skill</button>
+
+<script>
+    document.getElementById("checkPass").addEventListener("click", function () {
+        let password = prompt("Enter password:");
+
+        if (password === "naveen meena") {
+            
+            window.location.href = 'add.html';
+        } else {
+            alert("Incorrect password!");
+        }
+    });
+</script>
+    </form>
+
+    <script>
+        document.getElementById("skillForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            let skillName = document.getElementById("skillName").value;
+            let skillPercent = document.getElementById("skillPercent").value;
+
+            
+            let skills = JSON.parse(localStorage.getItem('skills')) || [];
+            skills.push({ name: skillName, percent: skillPercent });
+            localStorage.setItem('skills', JSON.stringify(skills));
+
+            
+            window.location.href = 'skills.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,487 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>my Portfolio</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background:#07111f;
+            color:white;
+        }
+
+        /* Navbar */
+
+        nav{
+            width:100%;
+            height:85px;
+            background:#0f172a;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:0 60px;
+            border-bottom:2px solid #14b8a6;
+            position:sticky;
+            top:0;
+        }
+
+        .logo{
+            font-size:34px;
+            font-weight:bold;
+            color:#14b8a6;
+            letter-spacing:3px;
+        }
+
+        .menu{
+            display:flex;
+            gap:20px;
+        }
+
+        .menu a{
+            text-decoration:none;
+            color:white;
+            padding:12px 24px;
+            border-radius:30px;
+            background:#1e293b;
+            transition:0.3s;
+            font-weight:bold;
+        }
+
+        .menu a:hover{
+            background:#14b8a6;
+            color:black;
+            transform:translateY(-3px);
+        }
+
+       
+        /* Skills */
+
+        .skills-section{
+            width:90%;
+            margin:100px auto;
+        }
+
+        .title{
+            text-align:center;
+            margin-bottom:60px;
+        }
+
+        .title h2{
+            font-size:50px;
+            margin-bottom:15px;
+        }
+
+        .title h2 span{
+            color:#14b8a6;
+        }
+
+        .title p{
+            color:#94a3b8;
+            font-size:18px;
+        }
+
+        .skills-container{
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:35px;
+        }
+
+        .skill-card{
+            background:#111827;
+            padding:30px;
+            border-radius:20px;
+            transition:0.3s;
+            border:1px solid #1e293b;
+        }
+
+        .skill-card:hover{
+            transform:translateY(-8px);
+            border-color:#14b8a6;
+            box-shadow:0 0 20px rgba(20,184,166,0.3);
+        }
+
+        .skill-info{
+            display:flex;
+            justify-content:space-between;
+            margin-bottom:15px;
+        }
+
+        .skill-info h4{
+            font-size:22px;
+        }
+
+        .skill-info span{
+            color:#14b8a6;
+            font-weight:bold;
+        }
+
+        .bar{
+            width:100%;
+            height:12px;
+            background:#1e293b;
+            border-radius:20px;
+            overflow:hidden;
+        }
+
+        .fill{
+            height:100%;
+            border-radius:20px;
+            background:linear-gradient(to right,#14b8a6,#38bdf8);
+        }
+
+        .html{
+            width:90%;
+        }
+
+        .css{
+            width:70%;
+        }
+
+        .js{
+            width:50%;
+        }
+
+        .cpp{
+            width:80%;
+        }
+
+        .dsa{
+            width:65%;
+        }
+
+        .dbms{
+            width:75%;
+        }
+
+        
+        /* Learning */
+
+        .learning{
+            width:90%;
+            margin:100px auto;
+        }
+
+        .learning h2{
+            font-size:45px;
+            color:#38bdf8;
+            margin-bottom:30px;
+            text-align:center;
+        }
+
+        .learning-list{
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:25px;
+        }
+
+        .learn-box{
+            background:#111827;
+            padding:25px;
+            border-radius:18px;
+            border:1px solid #1e293b;
+            transition:0.3s;
+        }
+
+        .learn-box:hover{
+            transform:scale(1.03);
+            border-color:#38bdf8;
+        }
+
+        .learn-box h3{
+            color:#14b8a6;
+            margin-bottom:10px;
+        }
+
+        .learn-box p{
+            color:#cbd5e1;
+            line-height:28px;
+        }
+        /* Button */
+        .btn {
+            margin-top: 40px;
+            display: inline-block;
+            padding: 14px 35px;
+            border-radius: 50px;
+            background: rgba(0, 191, 255, 0.15);
+            border: 2px solid #00bfff;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(0, 191, 255, 0.3);
+        }
+
+
+        /* Footer */
+
+        footer{
+            text-align:center;
+            padding:30px;
+            background:#0f172a;
+            color:#94a3b8;
+            border-top:2px solid #14b8a6;
+            margin-top:80px;
+        }
+
+        /* Responsive */
+
+        @media(max-width:900px){
+
+            .hero{
+                flex-direction:column;
+                text-align:center;
+            }
+
+            .hero-text{
+                width:100%;
+            }
+
+            .hero-image{
+                width:100%;
+            }
+
+            .skills-container{
+                grid-template-columns:1fr;
+            }
+
+            .learning-list{
+                grid-template-columns:1fr;
+            }
+
+            nav{
+                flex-direction:column;
+                height:auto;
+                padding:20px;
+            }
+
+            .menu{
+                flex-wrap:wrap;
+                justify-content:center;
+                margin-top:15px;
+            }
+
+            .hero-text h1{
+                font-size:45px;
+            }
+        }
+
+    </style>
+     <style>
+        body {
+            background: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            padding: 50px;
+        }
+        .skills-container {
+            width: 80%;
+            margin: auto;
+            padding-top: 20px;
+        }
+        .skill-box {
+            background: #111;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .skill-box h2 {
+            margin-bottom: 10px;
+        }
+        .progress-bar {
+            background: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 20px;
+        }
+        .progress {
+            background: #00bfff;
+            height: 100%;
+            text-align: center;
+            line-height: 20px;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav>
+
+        <div class="logo">PORTFOLIO</div>
+
+        <div class="menu">
+            <a href="home.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="skill.html">SKILLS</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+
+    </nav>
+
+    
+    <!-- Skills -->
+     
+
+    <section class="skills-section">
+        
+        <div class="title">
+
+            <h2>My <span>Skills</span></h2>
+
+            <p>
+                Technologies and subjects I have learned.
+            </p>
+
+        </div>
+
+        <div class="skills-container">
+
+            <div class="skill-card">
+
+                <div class="skill-info">
+                    <h4>HTML</h4>
+                    <span>90%</span>
+                </div>
+
+                <div class="bar">
+                    <div class="fill html"></div>
+                </div>
+
+            </div>
+
+            <div class="skill-card">
+
+                <div class="skill-info">
+                    <h4>CSS</h4>
+                    <span>70%</span>
+                </div>
+
+                <div class="bar">
+                    <div class="fill css"></div>
+                </div>
+
+            </div>
+
+            <div class="skill-card">
+
+                <div class="skill-info">
+                    <h4>JavaScript</h4>
+                    <span>50%</span>
+                </div>
+
+                <div class="bar">
+                    <div class="fill js"></div>
+                </div>
+
+            </div>
+
+            <div class="skill-card">
+
+                <div class="skill-info">
+                    <h4>C++</h4>
+                    <span>80%</span>
+                </div>
+
+                <div class="bar">
+                    <div class="fill cpp"></div>
+                </div>
+
+            </div>
+
+            <div class="skill-card">
+
+                <div class="skill-info">
+                    <h4>DSA</h4>
+                    <span>65%</span>
+                </div>
+
+                <div class="bar">
+                    <div class="fill dsa"></div>
+                </div>
+
+            </div>
+
+            <div class="skill-card">
+
+                <div class="skill-info">
+                    <h4>DBMS</h4>
+                    <span>75%</span>
+                </div>
+
+                <div class="bar">
+                    <div class="fill dbms"></div>
+                </div>
+
+            </div>
+
+        </div>
+       
+
+   
+
+    <!-- Learning -->
+
+    <section class="learning">
+
+        <h2>My Past Learning</h2>
+
+        <div class="learning-list">
+
+            <div class="learn-box">
+                <h3>C & C++</h3>
+                <p>I have learned C and C++ programming language basics and logic building.</p>
+            </div>
+
+            <div class="learn-box">
+                <h3>DSA</h3>
+                <p>I have learned Data Structures and Algorithms concepts.</p>
+            </div>
+
+            <div class="learn-box">
+                <h3>DBMS</h3>
+                <p>I have learned Database Management System fundamentals.</p>
+            </div>
+
+            <div class="learn-box">
+                <h3>OOPs & DCCN</h3>
+                <p>I have learned Object Oriented Programming and Networking basics.</p>
+            </div>
+
+        </div>
+        </div>
+
+        <!-- Button -->
+
+        <a href="add.html" class="btn">✨add new skill 
+
+    </a>
+
+    
+</section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        © 2026 Naveen Meena | All Rights Reserved
+
+    </footer>
+
+</body>
+
+</html>

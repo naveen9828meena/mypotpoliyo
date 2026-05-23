@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Naveen Meena">
+    <meta name="description" content="Contact Naveen Meena">
+    <meta name="keywords" content="HTML, CSS, Portfolio, Contact">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About myself and learning projects">
+    <meta name="keywords" content="HTML, CSS, Portfolio">
+    
+
+  <title> My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #050816;
+            color: white;
+            
+        }/* Navbar */
+        nav {
+            width: 100%;
+            height: 80px;
+            background: #111827;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 60px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        /* Logo */
+        .logo {
+            color: #00bfff;
+            font-size: 35px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Menu */
+        .menu {
+            display: flex;
+            gap: 25px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            background: #1f2937;
+            transition: 0.3s;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .menu a:hover {
+            background: #00bfff;
+            color: black;
+            box-shadow: 0 0 15px #00bfff;
+        }
+
+
+        
+
+        /* ── Hero Section ── */
+        .hero {
+            text-align: center;
+            padding: 70px 20px 40px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: #00bfff15;
+            border: 1px solid #00bfff44;
+            color: #00bfff;
+            font-size: 11px;
+            padding: 5px 18px;
+            border-radius: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            color: #ffffff;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 span {
+            color: #00bfff;
+        }
+
+        .hero p {
+            color: #8892a4;
+            font-size: 16px;
+            max-width: 480px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .divider {
+            width: 60px;
+            height: 3px;
+            background: #00bfff;
+            margin: 24px auto 0;
+            border-radius: 2px;
+        }
+
+        /* ── Contact Cards ── */
+        .cards-section {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            padding: 40px 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #0d1117;
+            border: 1px solid #1e2d40;
+            border-radius: 14px;
+            padding: 36px 44px;
+            text-align: center;
+            min-width: 220px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: #00bfff;
+            transform: translateY(-6px);
+        }
+
+        .card-icon {
+            width: 58px;
+            height: 58px;
+            background: #00bfff15;
+            border: 1px solid #00bfff33;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            font-size: 24px;
+            color: #00bfff;
+        }
+
+        .card-label {
+            color: #4a5568;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .card a {
+            color: #00bfff;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .card a:hover {
+            color: #ffffff;
+        }
+
+        /* ── Info Strip ── */
+        .info-strip {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            padding: 30px 20px;
+            border-top: 1px solid #ffffff08;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .info-item {
+            text-align: center;
+        }
+
+        .info-item .val {
+            color: #00bfff;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .info-item .lbl {
+            color: #4a5568;
+            font-size: 12px;
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ── Footer ── */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #2d3748;
+            font-size: 13px;
+            border-top: 1px solid #ffffff08;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">portfolio</div>
+        <div class="menu">
+            <a href="home.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="skill.html">SKILLS</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+    </nav>
+
+
+    <!-- Hero -->
+    <div class="hero">
+        <div class="hero-badge">Get in touch</div>
+        <h1>Contact <span>Me</span></h1>
+        <p>I build simple and secure projects. Have a problem or want to collaborate? Feel free to reach out anytime.
+            l build with<strong> html and css </strong>and sume other language. you are contact me to solve together codeing issues.
+        </p>
+        <div class="divider"></div>
+    </div>
+
+    <!-- Contact Cards -->
+    <section class="cards-section">
+        <div class="card">
+            <div class="card-icon">📧</div>
+            <div class="card-label">Email</div>
+            <a href="mailto:nmbadolidata@gmail.com">nmbadolidata@gmail.com</a>
+        </div>
+        <div class="card">
+            <div class="card-icon">📱</div>
+            <div class="card-label">Mobile</div>
+            <a href="tel:9828358953">+91 98283 58953</a>
+        </div>
+        <div class="card">
+            <div class="card-icon">📍</div>
+            <div class="card-label">Location</div>
+            <a href="https://maps.google.com/?q=Jaipur,Rajasthan">jaipur Rajasthan, India</a>
+        </div>
+    </section>
+
+    <!-- Info Strip -->
+    <div class="info-strip">
+        <div class="info-item">
+            <div class="val">24h</div>
+            <div class="lbl">Response Time</div>
+        </div>
+        <div class="info-item">
+            <div class="val">100%</div>
+            <div class="lbl">Secure</div>
+        </div>
+        <div class="info-item">
+            <div class="val">Free</div>
+            <div class="lbl">Consultation</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Naveen Meena &nbsp;|&nbsp; All Rights Reserved
+    </footer>
+
+</body>
+</html>

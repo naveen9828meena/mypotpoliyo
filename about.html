@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Naveen Meena">
+    <meta name="description" content="About myself and learning projects">
+    <meta name="keywords" content="HTML, CSS, Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #050816;
+            color: white;
+        }
+        /* Navbar */
+        nav {
+            width: 100%;
+            height: 80px;
+            background: #111827;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 60px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        /* Logo */
+        .logo {
+            color: #00bfff;
+            font-size: 35px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Menu */
+        .menu {
+            display: flex;
+            gap: 25px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            background: #1f2937;
+            transition: 0.3s;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .menu a:hover {
+            background: #00bfff;
+            color: black;
+            box-shadow: 0 0 15px #00bfff;
+        }
+
+        
+        /* Hero Section */
+
+        .hero{
+            width: 90%;
+            margin: 80px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-text{
+            width: 55%;
+        }
+
+        .hero-text h3{
+            color: #38bdf8;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h1{
+            font-size: 65px;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h1 span{
+            color: #a855f7;
+        }
+
+        .hero-text p{
+            color: #cbd5e1;
+            line-height: 30px;
+            font-size: 18px;
+            margin-bottom: 35px;
+        }
+
+        .hero-btn{
+            display: inline-block;
+            text-decoration: none;
+            background: linear-gradient(to right,#7c3aed,#38bdf8);
+            padding: 14px 35px;
+            border-radius: 40px;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .hero-btn:hover{
+            transform: scale(1.08);
+        }
+
+        /* Profile Image */
+
+        .hero-image{
+            width: 40%;
+            text-align: center;
+        }
+
+        .hero-image img{
+            width: 320px;
+            height: 320px;
+            border-radius: 30px;
+            object-fit: cover;
+            border: 5px solid #7c3aed;
+            box-shadow: 0 0 30px rgba(168,85,247,0.6);
+        } 
+        /* About */
+
+        .about{
+            width: 90%;
+            margin: 100px auto;
+            background: #111827;
+            padding: 50px;
+            border-radius: 30px;
+            border-left: 6px solid #38bdf8;
+        }
+
+        .about h2{
+            font-size: 45px;
+            margin-bottom: 20px;
+            color: #38bdf8;
+        }
+
+        .about p{
+            color: #cbd5e1;
+            font-size: 18px;
+            line-height: 32px;
+        }
+        /* Footer */
+
+        footer{
+            text-align: center;
+            padding: 30px;
+            background: #111827;
+            margin-top: 80px;
+            color: #94a3b8;
+            border-top: 2px solid #7c3aed;
+        }
+
+        /* Responsive */
+
+        @media(max-width:900px){
+
+            .hero{
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text{
+                width: 100%;
+            }
+
+            .hero-image{
+                width: 100%;
+            }
+
+            .skills-container{
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1{
+                font-size: 45px;
+            }
+
+            nav{
+                flex-direction: column;
+                height: auto;
+                padding: 20px;
+            }
+
+            .menu{
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 15px;
+            }
+        }
+        </style>
+</head>
+<body>
+    <!-- Navbar -->
+
+    <nav>
+
+        <div class="logo">PORTFOLIO</div>
+
+        <div class="menu">
+            <a href="home.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="skill.html">SKILLS</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+
+    </nav>
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h3>Hello, It's Me</h3>
+
+            <h1>Naveen <span>Meena</span></h1>
+
+            <p>
+                I am a Computer Science Engineering student at
+                Government Engineering College Jaipur.
+                I love web development, app development,
+                and creating modern UI designs.
+            </p>
+
+            <a href="explor.html" class="hero-btn">
+                Explore More
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img src="c:\Users\HP\Downloads\naveen.pun.jpeg" alt="Profile">
+
+        </div>
+
+    </section>
+     </section>
+
+    <!-- About -->
+
+    <section class="about">
+
+        <h2>About Me</h2>
+
+        <p>
+            My name is Naveen Meena. I am currently pursuing
+            B.Tech in Computer Science Engineering.
+            I have learned C, C++, DSA, DBMS,
+            Networking and Object Oriented Programming.
+            My goal is to become a professional
+            Full Stack Developer.
+        </p>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        © 2026 Naveen Meena | All Rights Reserved
+
+    </footer>
+</body>
+        
